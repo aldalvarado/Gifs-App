@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SearchBoxComponent } from './components/Search-Box/Search-BoxComponent';
 import { CardListComponent } from './components/card-list/card-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -13,7 +14,8 @@ import { CardListComponent } from './components/card-list/card-list.component';
     CardListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     HomePageComponent
