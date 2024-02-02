@@ -4,7 +4,7 @@ import { GifsService } from '../../services/gifs.service';
 
 @Component({
   selector: 'gifs-search-box',
-  standalone: false,
+  standalone: true,
   template: `
   <h5>Buscar</h5>
   <input type="text"

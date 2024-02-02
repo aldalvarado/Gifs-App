@@ -25,12 +25,14 @@ export class GifsService {
 
   }
 
-  SearchTag(tag: string): void {
+  async SearchTag(tag: string): Promise<void> {
     if (tag.length === 0) return;
     this.OrganizedHistory(tag);
-    this.http.get("https://api.giphy.com/v1/gifs/search?api_key=MCIKbOaAxX8GFN70JBfvfUK9e0pa5wAF&q=Valorant&limit=10")
-    .subscribe( resp => { console.log(resp) } );
-    console.log(this.ApiKey);
+
+    fetch("https://api.giphy.com/v1/gifs/search?api_key=MCIKbOaAxX8GFN70JBfvfUK9e0pa5wAF&q=Valorant&limit=10")
+    .then( resp => resp.json() )
+    .then( data => console.log(data) );
+
   }
 
 }
